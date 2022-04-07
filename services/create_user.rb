@@ -8,12 +8,12 @@ module CreateUser
   def create_user(params)
     params => email:, name:
 
-    return {error: 'Missing email'} if email.nil?
-    return {error: 'Missing name'} if name.nil?
+    return { error: 'Missing email' } if email.nil?
+    return { error: 'Missing name' } if name.nil?
 
     user = User.new(id: Time.now.to_i, email:, name:)
 
-    {ok: user}
+    { ok: user }
   end
 
   def call(env)
