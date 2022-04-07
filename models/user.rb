@@ -6,7 +6,5 @@ class User
     @id, @name, @email = id, name, email
   end
 
-  def to_h
-    { id: @id, name: @name, email: @email }
-  end
+  def to_h()= { id: @id, name: @name, email: @email }
 end
